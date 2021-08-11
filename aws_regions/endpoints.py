@@ -29,7 +29,7 @@ endpoints_url = (
 partition_names = ('aws', 'aws-cn', 'aws-us-gov')
 
 
-@lru_cache
+@lru_cache(maxsize=128)
 def get_endpoints():
     return requests.get(endpoints_url).json()
 
