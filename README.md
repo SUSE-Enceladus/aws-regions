@@ -31,7 +31,7 @@ a list of regions based on the AWS partition. By default this is this public
 AWS partition:
 
 ```python
-from aws-regions.endpoints import get_regions
+from aws_regions.endpoints import get_regions
 
 
 # Defaults to "aws" partition
@@ -41,15 +41,13 @@ regions = get_regions()
 cn_region = get_regions(partition='aws-cn')
 ```
 
-The available parition are: aws, aws-cn and aws-us-gov.
-
 The second function will return a list of all regions from all three
 partitions:
 
 ```python
 from aws_regions.endpoints import get_all_regions
 
-all_regions = get_all_regions()
+all_regions = get_all_regions()  # From aws, aws-cn and aws-us-gov
 ```
 
 Issues/Enhancements
