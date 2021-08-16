@@ -6,7 +6,7 @@ Overview
 This package provides a very simple API for retrieving the most up-to-date
 region list. The region info is pulled from the botocore Github project so
 this requires a network connection. The advantage to using botocore directly
-is that the region list is not reliant on the botocore version whcih is
+is that the region list is not reliant on the botocore version which is
 installed. This can be an issue if you are using system packages for example,
 which may get updates very infrequently and thus may be missing new regions.
 
