@@ -1,0 +1,21 @@
+name: Publish Python Package To OBS
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Invoke deployment hook
+        uses: ./.github/actions/webhook2
+        env:
+          webhook_type: 'form-urlencoded'
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
