@@ -31,7 +31,7 @@ Requires:       python3-requests
 %description
 
 %prep
-%setup -q -n aws-regions-%{version}
+%setup -q
 
 %build
 python3 setup.py build
@@ -44,6 +44,7 @@ python3 -m pytest
 
 %files
 %doc CHANGES.md README.md
+%{python3_sitelib}/*
 
 %changelog
 
