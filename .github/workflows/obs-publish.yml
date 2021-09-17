@@ -12,10 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout action repo
+        uses: actions/checkout@v2
+        with:
+          repository: suse-enceladus/.github
       - name: Invoke deployment hook
-        uses: ./.github/actions/webhook2
+        uses: ./actions/webhook-action
         env:
-          webhook_type: 'form-urlencoded'
           webhook_url: ${{ secrets.WEBHOOK_URL }}
           webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
