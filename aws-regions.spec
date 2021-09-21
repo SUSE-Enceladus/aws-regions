@@ -43,7 +43,7 @@ python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
 python3 -m pytest
 
 %files
-%doc CHANGES.md README.md
+%doc aws-regions.changes README.md
 %{python3_sitelib}/*
 
 %changelog
