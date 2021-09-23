@@ -1,4 +1,4 @@
-include CHANGES.md
+include aws-regions.changes
 include CONTRIBUTING.md
 include LICENSE
 include README.md

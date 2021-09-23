@@ -1,0 +1,11 @@
+-------------------------------------------------------------------
+Thu Aug 11 05:46:31 PM UTC 2021 - Sean Marlow <sean.marlow@suse.com>
+
+- v0.0.2
+  + Fix lru_cache bug. maxsize was not optional before python 3.8.
+
+-------------------------------------------------------------------
+Thu Aug 10 05:46:31 PM UTC 2021 - Sean Marlow <sean.marlow@suse.com>
+
+- v0.0.1
+  + Initial release.
