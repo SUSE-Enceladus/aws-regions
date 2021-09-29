@@ -3,3 +3,4 @@ workflow:
     - branch_package:
         source_project: Cloud:Tools:CI
         source_package: python3-aws-regions
+        target_project: Cloud:Tools:CI:Testing
