@@ -1,4 +1,4 @@
-include aws-regions.changes
+include python3-aws-regions.changes
 include CONTRIBUTING.md
 include LICENSE
 include README.md

@@ -16,7 +16,7 @@
 #
 
 
-Name:           aws-regions
+Name:           python3-aws-regions
 Version:        0.0.2
 Release:        0
 Summary:        API for retrieving the most up-to-date AWS region list
@@ -31,7 +31,7 @@ Requires:       python3-requests
 %description
 
 %prep
-%setup -q
+%setup -q -n aws-regions-%{version}
 
 %build
 python3 setup.py build
@@ -43,7 +43,7 @@ python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
 python3 -m pytest
 
 %files
-%doc aws-regions.changes README.md
+%doc python3-aws-regions.changes README.md
 %{python3_sitelib}/*
 
 %changelog
