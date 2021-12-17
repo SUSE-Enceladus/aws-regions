@@ -23,6 +23,7 @@ Summary:        API for retrieving the most up-to-date AWS region list
 License:        MIT
 URL:            https://github.com/SUSE-Enceladus/aws-regions
 Source:         https://files.pythonhosted.org/packages/source/a/aws-regions/aws-regions-%{version}.tar.gz
+BuildRequires:  python-rpm-macros
 BuildRequires:  python3-requests
 BuildRequires:  python3-pytest
 BuildRequires:  python3-vcrpy

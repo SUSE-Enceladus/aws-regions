@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Dec 17 05:44:26 PM UTC 2021 - Sean Marlow <sean.marlow@suse.com>
+
+- v0.0.4
+  + Add rpm-macros to build requirements in spec.
+
+-------------------------------------------------------------------
 Thu Sep 30 07:39:37 PM UTC 2021 - Sean Marlow <sean.marlow@suse.com>
 
 - v0.0.3
