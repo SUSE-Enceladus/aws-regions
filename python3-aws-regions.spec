@@ -27,7 +27,13 @@ BuildRequires:  python-rpm-macros
 BuildRequires:  python3-requests
 BuildRequires:  python3-pytest
 BuildRequires:  python3-vcrpy
+%if "%{python_flavor}" == "python36"
+BuildRequires:  python3-dataclasses
+%endif
 Requires:       python3-requests
+%if "%{python_flavor}" == "python36"
+Requires:       python3-dataclasses
+%endif
 
 %description
 
