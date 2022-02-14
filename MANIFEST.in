@@ -1,4 +1,4 @@
-include python3-aws-regions.changes
+include CHANGES.md
 include CONTRIBUTING.md
 include LICENSE
 include README.md
