@@ -18,8 +18,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import os
 import requests
 
+from aws_regions.config import Config
 from functools import lru_cache
 
 endpoints_url = (
@@ -27,6 +29,18 @@ endpoints_url = (
     'develop/botocore/data/endpoints.json'
 )
 partition_names = ('aws', 'aws-cn', 'aws-us-gov')
+default_config_file = '~/.config/aws_regions.config'
+
+
+def get_config(config_file: str = ''):
+    config_file = os.path.expanduser(config_file or default_config_file)
+
+    try:
+        config = Config.load_from_file(config_file)
+    except FileNotFoundError:
+        config = Config()
+
+    return config
 
 
 @lru_cache(maxsize=128)
@@ -42,15 +56,16 @@ def get_partition_data(partition: str):
             return partition_data
 
 
-def get_regions(partition: str = 'aws'):
+def get_regions(partition: str = 'aws', config_file: str = ''):
     partition_data = get_partition_data(partition)
-    return list(partition_data['regions'].keys())
+    additional_regions = get_config(config_file).get_custom_regions(partition)
+    return list(partition_data['regions'].keys()) + additional_regions
 
 
-def get_all_regions():
+def get_all_regions(config_file: str = ''):
     regions = []
 
     for name in partition_names:
-        regions += get_regions(name)
+        regions += get_regions(name, config_file=config_file)
 
     return regions
