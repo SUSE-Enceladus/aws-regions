@@ -1,3 +1,10 @@
+v0.1.0
+======
+
+- Add config and additional regions options. This allows for the addition
+  of custom regions in each partition.
+- Revert to using a Python style changes file.
+
 v0.0.4
 ======
   
