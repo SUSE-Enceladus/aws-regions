@@ -17,7 +17,7 @@
 
 
 Name:           python3-aws-regions
-Version:        0.1.0
+Version:        0.1.1
 Release:        0
 Summary:        API for retrieving the most up-to-date AWS region list
 License:        MIT
