@@ -27,7 +27,7 @@ BuildRequires:  python-rpm-macros
 BuildRequires:  python3-requests
 BuildRequires:  python3-pytest
 BuildRequires:  python3-vcrpy
-%if %python3_version_nodots < 37
+%if 0%{?sle_version} > 0
 BuildRequires:  python3-dataclasses
 %endif
 Requires:       python3-requests
