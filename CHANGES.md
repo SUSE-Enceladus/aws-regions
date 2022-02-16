@@ -1,3 +1,8 @@
+v0.1.2
+======
+
+- Fix python conditional in spec file using sle version.
+
 v0.1.1
 ======
 
