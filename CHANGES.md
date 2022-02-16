@@ -1,3 +1,9 @@
+v0.1.1
+======
+
+- Fix python conditional in spec file. Use a macro that exists in all
+  python-rpm-macros versions.
+
 v0.1.0
 ======
 
