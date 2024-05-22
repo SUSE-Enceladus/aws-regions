@@ -1,3 +1,10 @@
+v0.2.0
+======
+
+- Migrate spec build to python 3.11
+- Update vcrpy cassettes to 3.11 format
+- Update compatible python versions
+
 v0.1.2
 ======
 
