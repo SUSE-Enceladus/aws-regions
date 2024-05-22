@@ -19,7 +19,7 @@
 %{?sle15_python_module_pythons}
 
 Name:           python-aws-regions
-Version:        0.1.2
+Version:        0.2.0
 Release:        0
 Summary:        API for retrieving the most up-to-date AWS region list
 License:        MIT
