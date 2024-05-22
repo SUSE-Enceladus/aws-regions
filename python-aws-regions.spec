@@ -15,8 +15,10 @@
 # Please submit bugfixes or comments via https://bugs.opensuse.org/
 #
 
+%define python python
+%{?sle15_python_module_pythons}
 
-Name:           python3-aws-regions
+Name:           python-aws-regions
 Version:        0.1.2
 Release:        0
 Summary:        API for retrieving the most up-to-date AWS region list
@@ -24,34 +26,34 @@ License:        MIT
 URL:            https://github.com/SUSE-Enceladus/aws-regions
 Source:         https://files.pythonhosted.org/packages/source/a/aws-regions/aws-regions-%{version}.tar.gz
 BuildRequires:  python-rpm-macros
-BuildRequires:  python3-requests
-BuildRequires:  python3-pytest
-BuildRequires:  python3-vcrpy
-%if 0%{?sle_version} > 0
-BuildRequires:  python3-dataclasses
-%endif
-Requires:       python3-requests
-%if %python3_version_nodots < 37
-Requires:       python3-dataclasses
-%endif
+BuildRequires:  %{python_module pip}
+BuildRequires:  %{python_module requests}
+BuildRequires:  %{python_module setuptools}
+BuildRequires:  %{python_module wheel}
+BuildRequires:  %{python_module vcrpy}
+BuildRequires:  %{python_module pytest}
+Requires:       python-requests
+%python_subpackages
 
 %description
 
 %prep
-%setup -q -n aws-regions-%{version}
+%autosetup -n aws-regions-%{version}
 
 %build
-python3 setup.py build
+%pyproject_wheel
 
 %install
-python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
+%pyproject_install
 
 %check
-python3 -m pytest
+%pytest
 
-%files
+%files %{python_files}
+%license LICENSE
 %doc CHANGES.md README.md
-%{python3_sitelib}/*
+%{python_sitelib}/*
 
 %changelog
+
 
