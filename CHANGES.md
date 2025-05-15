@@ -1,3 +1,8 @@
+v0.3.0
+======
+
+- Update spec to build for one version of python
+
 v0.2.0
 ======
 
