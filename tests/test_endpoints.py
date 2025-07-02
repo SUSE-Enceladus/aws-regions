@@ -28,6 +28,8 @@ def test_get_all_regions():
         'ap-southeast-1', 'ap-southeast-2', 'ap-southeast-3', 'ap-southeast-4',
         'ca-central-1',
         'ca-west-1',
+        'cn-north-1',
+        'cn-northwest-1',
         'eu-central-1',
         'eu-central-2',
         'eu-north-1',
@@ -39,15 +41,14 @@ def test_get_all_regions():
         'me-south-1',
         'sa-east-1',
         'us-east-1', 'us-east-2',
+        'us-gov-east-1',
+        'us-gov-west-1',
         'us-west-1', 'us-west-2',
         'zu-west-1',
-        'cn-north-1',
-        'cn-northwest-1',
-        'us-gov-east-1',
-        'us-gov-west-1'
     ]
 
     regions = get_all_regions(config_file='tests/data/test.config')
+    regions.sort()
     assert regions == expected_regions
 
 
@@ -64,6 +65,8 @@ def test_get_all_regions_no_config():
         'ap-southeast-1', 'ap-southeast-2', 'ap-southeast-3', 'ap-southeast-4',
         'ca-central-1',
         'ca-west-1',
+        'cn-north-1',
+        'cn-northwest-1',
         'eu-central-1',
         'eu-central-2',
         'eu-north-1',
@@ -75,12 +78,11 @@ def test_get_all_regions_no_config():
         'me-south-1',
         'sa-east-1',
         'us-east-1', 'us-east-2',
-        'us-west-1', 'us-west-2',
-        'cn-north-1',
-        'cn-northwest-1',
         'us-gov-east-1',
-        'us-gov-west-1'
+        'us-gov-west-1',
+        'us-west-1', 'us-west-2',
     ]
 
     regions = get_all_regions(config_file='tests/data/no.config')
+    regions.sort()
     assert regions == expected_regions
