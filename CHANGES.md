@@ -1,3 +1,8 @@
+v0.4.0
+======
+
+- Cast regions list to a set to remove duplicates
+
 v0.3.0
 ======
 
