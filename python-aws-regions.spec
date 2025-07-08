@@ -24,7 +24,7 @@
 %global _sitelibdir %{%{pythons}_sitelib}
 
 Name:           python-aws-regions
-Version:        0.3.0
+Version:        0.4.0
 Release:        0
 Summary:        API for retrieving the most up-to-date AWS region list
 License:        MIT
