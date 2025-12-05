@@ -9,6 +9,7 @@ class Config:
     regions_aws: list = field(default_factory=list)
     regions_aws_cn: list = field(default_factory=list)
     regions_aws_us_gov: list = field(default_factory=list)
+    regions_aws_eusc: list = field(default_factory=list)
 
     @classmethod
     def load_from_file(cls, filename):

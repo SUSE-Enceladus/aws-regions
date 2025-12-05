@@ -28,7 +28,7 @@ endpoints_url = (
     'https://raw.githubusercontent.com/boto/botocore/'
     'develop/botocore/data/endpoints.json'
 )
-partition_names = ('aws', 'aws-cn', 'aws-us-gov')
+partition_names = ('aws', 'aws-cn', 'aws-us-gov', 'aws-eusc')
 default_config_file = '~/.config/aws_regions.config'
 
 
