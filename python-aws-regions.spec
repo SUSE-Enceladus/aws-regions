@@ -37,7 +37,9 @@ BuildRequires:  %{pythons}-setuptools
 BuildRequires:  %{pythons}-wheel
 BuildRequires:  %{pythons}-vcrpy
 BuildRequires:  %{pythons}-pytest
+BuildRequires:  %{pythons}-PyYAML
 Requires:       %{pythons}-requests
+Requires:       %{pythons}-PyYAML
 
 %description
 
