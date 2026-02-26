@@ -1,3 +1,8 @@
+v0.5.1
+======
+
+- Add missing PyYAML requirement
+
 v0.5.0
 ======
 
