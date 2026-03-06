@@ -15,7 +15,6 @@ class Config:
     ignored_regions_aws_us_gov: list = field(default_factory=list)
     ignored_regions_aws_eusc: list = field(default_factory=list)
 
-
     @classmethod
     def load_from_file(cls, filename):
         with open(filename, 'r') as fh:

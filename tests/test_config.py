@@ -15,7 +15,11 @@ def test_defaults():
 
 
 def test_load_from_file():
-    config_file = os.path.join(os.path.dirname(__file__), 'data', 'test.config')
+    config_file = os.path.join(
+        os.path.dirname(__file__),
+        'data',
+        'test.config'
+    )
     config = Config.load_from_file(config_file)
     assert config.regions_aws == ['zu-west-1']
     assert config.ignored_regions_aws == [
