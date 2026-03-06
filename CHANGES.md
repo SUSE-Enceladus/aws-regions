@@ -1,3 +1,8 @@
+v0.6.0
+======
+
+- Adds a configuration option to ignore regions if required
+
 v0.5.1
 ======
 
