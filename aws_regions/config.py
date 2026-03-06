@@ -10,6 +10,10 @@ class Config:
     regions_aws_cn: list = field(default_factory=list)
     regions_aws_us_gov: list = field(default_factory=list)
     regions_aws_eusc: list = field(default_factory=list)
+    ignored_regions_aws: list = field(default_factory=list)
+    ignored_regions_aws_cn: list = field(default_factory=list)
+    ignored_regions_aws_us_gov: list = field(default_factory=list)
+    ignored_regions_aws_eusc: list = field(default_factory=list)
 
     @classmethod
     def load_from_file(cls, filename):
@@ -33,3 +37,6 @@ class Config:
 
     def get_custom_regions(self, partition):
         return getattr(self, f'regions_{partition.replace("-", "_")}')
+
+    def get_custom_ignored_regions(self, partition):
+        return getattr(self, f'ignored_regions_{partition.replace("-", "_")}')

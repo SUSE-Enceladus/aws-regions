@@ -58,10 +58,17 @@ def get_partition_data(partition: str):
 
 def get_regions(partition: str = 'aws', config_file: str = ''):
     partition_data = get_partition_data(partition)
-    additional_regions = get_config(config_file).get_custom_regions(partition)
-    return list(
+    config = get_config(config_file)
+    additional_regions = config.get_custom_regions(partition)
+    all_regions = list(
         set(
             list(partition_data['regions'].keys()) + additional_regions
+        )
+    )
+    return list(
+        filter(
+            lambda r: r not in config.get_custom_ignored_regions(partition),
+            all_regions
         )
     )
 
