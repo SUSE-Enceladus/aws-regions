@@ -40,7 +40,7 @@ with open('requirements-dev.txt') as req_file:
 
 setup(
     name='aws-regions',
-    version='0.5.1',
+    version='0.6.0',
     description='Provides functions to get up-to-date AWS regions lists.',
     long_description=readme,
     long_description_content_type="text/markdown",
